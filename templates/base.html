@@ -1,0 +1,136 @@
+{% load static from staticfiles%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>মিস্ত্রি ভাই</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="{% static 'Holder.js' %}"></script>
+	<link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<h3 class="display-4">মিস্ত্রি ভাই</h3>
+		<button class="navbar-toggler" type="button" data-toggle = "collapse" data-target = "#navbarResponsive">
+			<span class="navbar-toggler-icon">
+			</span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item" active>
+					<a class="nav-link" href="/">হোম পেজ</a>
+				</li>
+				<li class="nav-item" active>
+					<a class="nav-link" href="/mistri">নিয়োগ করুন</a>
+				</li>
+				<li class="nav-item" active>
+					<a class="nav-link" href="#">মালামাল ক্রয় করুন</a>
+				</li>
+				<li class="nav-item" active>
+					<a class="nav-link" href="/about">আমাদের সম্পর্কে জানুন</a>
+				</li>
+				
+				{% if user.is_authenticated %}
+				<li class="nav-item" active>
+					<a class="nav-link" href="{% url 'profile' %}">{{ user.username }}</a>
+				</li>
+				<li class="nav-item" active>
+					<a class="nav-link" href="{% url 'logout' %}">লগআউট</a>
+				</li>
+				{% else %}
+					<li class="nav-item" active>
+					<a class="nav-link" href="{% url 'register' %}">লগইন / রেজিস্টার</a>
+					</li>
+				{%endif%}
+				
+			</ul>
+			{% if messages %}
+				{% for message in messages %}
+					<div class="alert alert-{{message.tags}}">
+						{{ message }}
+					</div>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+	
+</nav>
+
+{% block afternav %}
+
+
+{% endblock %}
+
+
+
+
+
+<!--- Connect -->
+
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-12">
+			<h2>আমাদের পাবেন</h2>
+		</div>
+		<div class="col-12 social padding"">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-google-plus-g"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></a>
+		</div>
+	</div>
+	
+</div>
+<!--- Footer -->
+
+<footer>
+	<div class="container-fluid padding" >
+		<div class="row text-center" >
+			<div class="col-lg-6">
+				<hr class="light">
+				<h5>যোগাযোগের মাধ্যম</h5>
+				<hr class="light">
+				<p>০১৭২১৬৬১৪৮৮</p>
+				<p>mdrahmanamin@gmail.com</p>
+				<p>ডিপার্টমেন্ট অব সিএসই</p>
+				<p>বশেমুরবিপ্রবি</p>
+				<p>গোপালগঞ্জ -৮১০০</p>
+			</div>
+			<div class="col-lg-6">
+				<hr class="light">
+				<h5>যোগাযোগের সময়</h5>
+				<hr class="light">
+				<p>শনিভার ৯-০০ -> ৫-০০</p>
+				<p>রবিবার ১১-০০ -> ৪-০০</p>
+				<p>শুক্রবার বন্ধ</p>
+			</div>
+			<div class="col-12">
+				<hr class="light-100">
+				<h5>&copy;mdrahmanamin@gmail.com</h5>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

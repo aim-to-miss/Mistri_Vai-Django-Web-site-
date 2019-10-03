@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static from staticfiles%}
+
+{% block afternav %}
+
+
+<!--- Two Column Section -->
+
+	<div class="container-fluid padding">
+		<div class="row padding">
+			<div class="col-lg-6">
+				<img src="{{ user.profile.image.url }}" class=" img-fluid img-thumbnail mx-auto d-block">
+			</div>
+			<div class="col-lg-6">
+				<h1>{{user.username}}</h1>
+				<h1>{{user.email}}</h1>
+				<h1>{{user.profile.address}}</h1>
+				<h1>{{user.profile.mobile}}</h1>
+			</div>
+			
+		</div>	
+	</div>
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

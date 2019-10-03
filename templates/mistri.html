@@ -1,0 +1,479 @@
+{% extends "base.html" %}
+{% load static from staticfiles%}
+
+{% block afternav %}
+	<div class="container-fluid padding">
+		<div class="row welcome text-center">
+			<dir class="col-12">
+				<h1 class="display-6">জনপ্রিয়</h1>
+			</dir>
+		</div>
+		<hr>	
+	</div>
+	
+
+	<div class="container-fluid padding">
+		<div class="row padding">
+				{% for obj in mistriList %}
+					<div class="col-md-4">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img class="img-fluid" src="{% static obj.mistri_img %}" >
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<h6 class="card-title"> অভিজ্ঞতাঃ<b style="color: #1a6ec7">{{obj.mistri_experiece}}</b></h6>
+										<h5 class="card-text">রেটিংঃ <b style="color: #1a6ec7">{{obj.mistri_rating}}</b></h5>
+										<h5 class="card-text">মজুরিঃ <b style="color: #1a6ec7">{{obj.mistri_fee}}</b></h5>	
+									</div>
+								</div>
+								<div class="flip-card-back">
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<p class="card-title"> ইতিপূর্বে কাজ সম্পাদন করেছেনঃ <b style="color: #27874e">{{obj.mistri_job_completed}}</b> টি</p>
+										<p class="card-title"> <b style="color: #27874e">{{obj.mistri_special_ability }}</b></p>
+										<h5 class="card-text">বর্তমান অবস্থাঃ   <b style="color: #1a6ec7">{{obj.mistri_status}}</b></h5>
+										<button type="button" class="btn btn-primary btn-lg">
+											নিয়োগ করুন 
+										</button>
+									</div>
+								</div>
+							</div>				
+						</div>
+					</div>
+				{% endfor %}
+		</div>
+	</div>
+	<hr class="my-4">
+
+
+
+
+	<div class="container-fluid padding">
+		<div class="row welcome text-center">
+			<dir class="col-12">
+				<h1 class="display-6">ক্যাটাগরি</h1>
+			</dir>
+		</div>
+		<hr>	
+	</div>
+
+
+	<div class="container-fluid padding">
+		<div class="row text-center padding">
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<a href="#mason"><img class="img-fluid" src="{% static 'mistri.jpg' %}"></a>
+				<h4>রাজমিস্ত্রি</h4>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<a href="#plumber"><img class="img-fluid" src="{% static 'plumber.jpg' %}"></a>
+				<h4>স্যানিটারি মিস্ত্রি</h4>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<a href="#electrician"><img class="img-fluid" src="{% static 'electrician.jpg' %}"></a>
+				<h4>ইলেক্ট্রিশিয়ান </h4>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<a href="#tilce"><img class="img-fluid" src="{% static 'plasterer.png' %}"></a>
+				<h4>টাইলস মিস্ত্রি</h4>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<a href="#labour"><img class="img-fluid" src="{% static 'labour.jpg' %}"></a>
+				<h4>লেবার</h4>
+			</div> 
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<a href="#kath"><img class="img-fluid" src="{% static 'kathmistri.jpg' %}"></a>
+				<h4>কাঠ মিস্ত্রি </h4>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4"> 
+				<a href="#glass"><img class="img-fluid" src="{% static 'glass.png' %}"></a>
+				<h4>গ্লাস মিস্ত্রি</h4>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4"> 
+				<a href="#rong"><img class="img-fluid" src="{% static 'painter.jpeg' %}"></a>
+				<h4>রং মিস্ত্রি</h4>
+			</div>
+		</div>
+		<hr class="my-4">
+	</div>
+
+<div class="container-fluid padding" id = "mason">
+	<div class="row welcome text-center">
+		<dir class="col-12">
+			<h1 class="display-6">রাজমিস্ত্রি</h1>
+		</dir>
+	</div>
+	<hr>	
+</div>
+
+<div class="container-fluid padding">
+		<div class="row padding">
+				{% for obj in mistriList %}
+					<div class="col-md-4">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img class="img-fluid" src="{% static obj.mistri_img %}" >
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<h5 class="card-title"> অভিজ্ঞতাঃ<b style="color: #1a6ec7">{{obj.mistri_experiece}}</b></h5>
+										<h5 class="card-text">রেটিংঃ <b style="color: #1a6ec7">{{obj.mistri_rating}}</b></h5>
+										<h5 class="card-text">মজুরিঃ <b style="color: #1a6ec7">{{obj.mistri_fee}}</b></h5>	
+									</div>
+								</div>
+								<div class="flip-card-back">
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<p class="card-title"> ইতিপূর্বে কাজ সম্পাদন করেছেনঃ <b style="color: #27874e">{{obj.mistri_job_completed}}</b> টি</p>
+										<p class="card-title"> <b style="color: #27874e">{{obj.mistri_special_ability }}</b></p>
+										<h5 class="card-text">বর্তমান অবস্থাঃ   <b style="color: #1a6ec7">{{obj.mistri_status}}</b></h5>
+										<button type="button" class="btn btn-primary btn-lg">
+											নিয়োগ করুন 
+										</button>
+									</div>
+								</div>
+							</div>				
+						</div>
+					</div>
+				{% endfor %}
+		</div>
+	</div>
+	<hr class="my-4">
+
+
+
+
+<div class="container-fluid padding" id = "plumber">
+	<div class="row welcome text-center">
+		<dir class="col-12">
+			<h1 class="display-6">স্যানিটারি মিস্ত্রি</h1>
+		</dir>
+	</div>
+	<hr>	
+</div>
+
+<div class="container-fluid padding">
+		<div class="row padding">
+				{% for obj in mistriList %}
+					<div class="col-md-4">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img class="img-fluid" src="{% static obj.mistri_img %}" >
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<h5 class="card-title"> অভিজ্ঞতাঃ<b style="color: #1a6ec7">{{obj.mistri_experiece}}</b></h5>
+										<h5 class="card-text">রেটিংঃ <b style="color: #1a6ec7">{{obj.mistri_rating}}</b></h5>
+										<h5 class="card-text">মজুরিঃ <b style="color: #1a6ec7">{{obj.mistri_fee}}</b></h5>	
+									</div>
+								</div>
+								<div class="flip-card-back">
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<p class="card-title"> ইতিপূর্বে কাজ সম্পাদন করেছেনঃ <b style="color: #27874e">{{obj.mistri_job_completed}}</b> টি</p>
+										<p class="card-title"> <b style="color: #27874e">{{obj.mistri_special_ability }}</b></p>
+										<h5 class="card-text">বর্তমান অবস্থাঃ   <b style="color: #1a6ec7">{{obj.mistri_status}}</b></h5>
+										<button type="button" class="btn btn-primary btn-lg">
+											নিয়োগ করুন 
+										</button>
+									</div>
+								</div>
+							</div>				
+						</div>
+					</div>
+				{% endfor %}
+		</div>
+	</div>
+	<hr class="my-4">
+
+
+
+
+
+
+<div class="container-fluid padding" id = "electrician">
+	<div class="row welcome text-center">
+		<dir class="col-12">
+			<h1 class="display-6">ইলেক্ট্রিশিয়ান</h1>
+		</dir>
+	</div>
+	<hr>	
+</div>
+
+
+
+<div class="container-fluid padding">
+		<div class="row padding">
+				{% for obj in mistriList %}
+					<div class="col-md-4">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img class="img-fluid" src="{% static obj.mistri_img %}" >
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<h5 class="card-title"> অভিজ্ঞতাঃ<b style="color: #1a6ec7">{{obj.mistri_experiece}}</b></h5>
+										<h5 class="card-text">রেটিংঃ <b style="color: #1a6ec7">{{obj.mistri_rating}}</b></h5>
+										<h5 class="card-text">মজুরিঃ <b style="color: #1a6ec7">{{obj.mistri_fee}}</b></h5>	
+									</div>
+								</div>
+								<div class="flip-card-back">
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<p class="card-title"> ইতিপূর্বে কাজ সম্পাদন করেছেনঃ <b style="color: #27874e">{{obj.mistri_job_completed}}</b> টি</p>
+										<p class="card-title"> <b style="color: #27874e">{{obj.mistri_special_ability }}</b></p>
+										<h5 class="card-text">বর্তমান অবস্থাঃ   <b style="color: #1a6ec7">{{obj.mistri_status}}</b></h5>
+										<button type="button" class="btn btn-primary btn-lg">
+											নিয়োগ করুন 
+										</button>
+									</div>
+								</div>
+							</div>				
+						</div>
+					</div>
+				{% endfor %}
+		</div>
+	</div>
+	<hr class="my-4">
+
+<div class="container-fluid padding" id="labour">
+	<div class="row welcome text-center">
+		<dir class="col-12">
+			<h1 class="display-6">লেবার</h1>
+		</dir>
+	</div>
+	<hr>	
+</div>
+
+
+<div class="container-fluid padding">
+		<div class="row padding">
+				{% for obj in mistriList %}
+					<div class="col-md-4">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img class="img-fluid" src="{% static obj.mistri_img %}" >
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<h5 class="card-title"> অভিজ্ঞতাঃ<b style="color: #1a6ec7">{{obj.mistri_experiece}}</b></h5>
+										<h5 class="card-text">রেটিংঃ <b style="color: #1a6ec7">{{obj.mistri_rating}}</b></h5>
+										<h5 class="card-text">মজুরিঃ <b style="color: #1a6ec7">{{obj.mistri_fee}}</b></h5>	
+									</div>
+								</div>
+								<div class="flip-card-back">
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<p class="card-title"> ইতিপূর্বে কাজ সম্পাদন করেছেনঃ <b style="color: #27874e">{{obj.mistri_job_completed}}</b> টি</p>
+										<p class="card-title"> <b style="color: #27874e">{{obj.mistri_special_ability }}</b></p>
+										<h5 class="card-text">বর্তমান অবস্থাঃ   <b style="color: #1a6ec7">{{obj.mistri_status}}</b></h5>
+										<button type="button" class="btn btn-primary btn-lg">
+											নিয়োগ করুন 
+										</button>
+									</div>
+								</div>
+							</div>				
+						</div>
+					</div>
+				{% endfor %}
+		</div>
+	</div>
+	<hr class="my-4">
+
+
+
+<div class="container-fluid padding" id="kath">
+	<div class="row welcome text-center">
+		<dir class="col-12">
+			<h1 class="display-6">কাঠ মিস্ত্রি </h1>
+		</dir>
+	</div>
+	<hr>	
+</div>
+
+
+<div class="container-fluid padding">
+		<div class="row padding">
+				{% for obj in mistriList %}
+					<div class="col-md-4">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img class="img-fluid" src="{% static obj.mistri_img %}" >
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<h5 class="card-title"> অভিজ্ঞতাঃ<b style="color: #1a6ec7">{{obj.mistri_experiece}}</b></h5>
+										<h5 class="card-text">রেটিংঃ <b style="color: #1a6ec7">{{obj.mistri_rating}}</b></h5>
+										<h5 class="card-text">মজুরিঃ <b style="color: #1a6ec7">{{obj.mistri_fee}}</b></h5>	
+									</div>
+								</div>
+								<div class="flip-card-back">
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<p class="card-title"> ইতিপূর্বে কাজ সম্পাদন করেছেনঃ <b style="color: #27874e">{{obj.mistri_job_completed}}</b> টি</p>
+										<p class="card-title"> <b style="color: #27874e">{{obj.mistri_special_ability }}</b></p>
+										<h5 class="card-text">বর্তমান অবস্থাঃ   <b style="color: #1a6ec7">{{obj.mistri_status}}</b></h5>
+										<button type="button" class="btn btn-primary btn-lg">
+											নিয়োগ করুন 
+										</button>
+									</div>
+								</div>
+							</div>				
+						</div>
+					</div>
+				{% endfor %}
+		</div>
+	</div>
+	<hr class="my-4">
+
+
+<div class="container-fluid padding" id="tilce">
+	<div class="row welcome text-center">
+		<dir class="col-12">
+			<h1 class="display-6">টাইলস মিস্ত্রি</h1>
+		</dir>
+	</div>
+	<hr>	
+</div>
+
+
+<div class="container-fluid padding">
+		<div class="row padding">
+				{% for obj in mistriList %}
+					<div class="col-md-4">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img class="img-fluid" src="{% static obj.mistri_img %}" >
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<h5 class="card-title"> অভিজ্ঞতাঃ<b style="color: #1a6ec7">{{obj.mistri_experiece}}</b></h5>
+										<h5 class="card-text">রেটিংঃ <b style="color: #1a6ec7">{{obj.mistri_rating}}</b></h5>
+										<h5 class="card-text">মজুরিঃ <b style="color: #1a6ec7">{{obj.mistri_fee}}</b></h5>	
+									</div>
+								</div>
+								<div class="flip-card-back">
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<p class="card-title"> ইতিপূর্বে কাজ সম্পাদন করেছেনঃ <b style="color: #27874e">{{obj.mistri_job_completed}}</b> টি</p>
+										<p class="card-title"> <b style="color: #27874e">{{obj.mistri_special_ability }}</b></p>
+										<h5 class="card-text">বর্তমান অবস্থাঃ   <b style="color: #1a6ec7">{{obj.mistri_status}}</b></h5>
+										<button type="button" class="btn btn-primary btn-lg">
+											নিয়োগ করুন 
+										</button>
+									</div>
+								</div>
+							</div>				
+						</div>
+					</div>
+				{% endfor %}
+		</div>
+	</div>
+	<hr class="my-4">
+
+<div class="container-fluid padding" id="glass">
+	<div class="row welcome text-center">
+		<dir class="col-12">
+			<h1 class="display-6">গ্লাস মিস্ত্রি</h1>
+		</dir>
+	</div>
+	<hr>	
+</div>
+
+<div class="container-fluid padding">
+		<div class="row padding">
+				{% for obj in mistriList %}
+					<div class="col-md-4">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img class="img-fluid" src="{% static obj.mistri_img %}" >
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<h5 class="card-title"> অভিজ্ঞতাঃ<b style="color: #1a6ec7">{{obj.mistri_experiece}}</b></h5>
+										<h5 class="card-text">রেটিংঃ <b style="color: #1a6ec7">{{obj.mistri_rating}}</b></h5>
+										<h5 class="card-text">মজুরিঃ <b style="color: #1a6ec7">{{obj.mistri_fee}}</b></h5>	
+									</div>
+								</div>
+								<div class="flip-card-back">
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<p class="card-title"> ইতিপূর্বে কাজ সম্পাদন করেছেনঃ <b style="color: #27874e">{{obj.mistri_job_completed}}</b> টি</p>
+										<p class="card-title"> <b style="color: #27874e">{{obj.mistri_special_ability }}</b></p>
+										<h5 class="card-text">বর্তমান অবস্থাঃ   <b style="color: #1a6ec7">{{obj.mistri_status}}</b></h5>
+										<button type="button" class="btn btn-primary btn-lg">
+											নিয়োগ করুন 
+										</button>
+									</div>
+								</div>
+							</div>				
+						</div>
+					</div>
+				{% endfor %}
+		</div>
+	</div>
+	<hr class="my-4">
+
+<div class="container-fluid padding" id="rong">
+	<div class="row welcome text-center">
+		<dir class="col-12">
+			<h1 class="display-6">রং মিস্ত্রি</h1>
+		</dir>
+	</div>
+	<hr>	
+</div>
+
+<div class="container-fluid padding">
+		<div class="row padding">
+				{% for obj in mistriList %}
+					<div class="col-md-4">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img class="img-fluid" src="{% static obj.mistri_img %}" >
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<h5 class="card-title"> অভিজ্ঞতাঃ<b style="color: #1a6ec7">{{obj.mistri_experiece}}</b></h5>
+										<h5 class="card-text">রেটিংঃ <b style="color: #1a6ec7">{{obj.mistri_rating}}</b></h5>
+										<h5 class="card-text">মজুরিঃ <b style="color: #1a6ec7">{{obj.mistri_fee}}</b></h5>	
+									</div>
+								</div>
+								<div class="flip-card-back">
+									<div class="card-body text-center">
+										<h3 class="card-title"> {{obj.mistri_name}}</h3>
+										<h4 class="card-title"><b>{{obj.mistri_catagory}}</b></h4>
+										<p class="card-title"> ইতিপূর্বে কাজ সম্পাদন করেছেনঃ <b style="color: #27874e">{{obj.mistri_job_completed}}</b> টি</p>
+										<p class="card-title"> <b style="color: #27874e">{{obj.mistri_special_ability }}</b></p>
+										<h5 class="card-text">বর্তমান অবস্থাঃ   <b style="color: #1a6ec7">{{obj.mistri_status}}</b></h5>
+										<button type="button" class="btn btn-primary btn-lg">
+											নিয়োগ করুন 
+										</button>
+									</div>
+								</div>
+							</div>				
+						</div>
+					</div>
+				{% endfor %}
+		</div>
+	</div>
+	<hr class="my-4">
+
+
+{% endblock %}

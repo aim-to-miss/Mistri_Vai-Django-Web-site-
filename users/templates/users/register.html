@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static from staticfiles%}
+{% load crispy_forms_tags %}
+{% block afternav %}
+
+<section class="container-fluid ">
+	<section class="row justify-content-center">
+		<section class="col-6 col-sm-4 col-md-4">
+			<div class="content-section">
+				<form method="POST">
+					{% csrf_token %}
+					<fieldset class="form-group">
+						<legend class="border-bottom mb-4">আমাদের সাথে যোগ দিন</legend>
+						{{ forms|crispy }} 
+					</fieldset>
+					<div class="form-group">
+						<button class="btn btn-outline-info" type="submit">সাইন আপ </button>
+					</div>
+				</form>
+				<div class = "border-top pt-3">
+					<small class="text-muted">
+						আপনার আগে একাউন্ট খোলা আছে?
+						<a class="ml-2" href="{% url 'login' %}">সাইন ইন</a> 
+					</small>
+				</div>
+			</div>
+		</section>
+		
+	</section>
+	
+</section>
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

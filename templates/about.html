@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static from staticfiles%}
+
+{% block afternav %}
+
+<div class="jumbotron">
+	<h1 class="display-5">মিস্ত্রি ভাই</h1>
+	<p class="lead">
+		আসসালামুয়ালাইকুম। "মিস্ত্রি ভাই" একটি মানব শক্তি নিয়োগ এবং বাড়িঘর নির্মাণ ও রক্ষণাবেক্ষণ এর জন্য প্রয়োজনীয় সকল দ্রব্যাদি ক্রয় এর একটি অনলাইন ব্যাবস্থা। গ্রাহক এখানে তার প্রয়োজন অনুযায়ী তাদের বাড়ি নির্মাণ ও রক্ষণাবেক্ষণ এর সকল উপাদান গুলো সহজেই খুজে পেতে পারে এবং কোনো  রকম জটিলতা ছাড়া ক্রয় করতে পারে। মূল্য পরিষোধের জটিলতা এড়ানোর জন্য এখানে নিজস্ব অনলাইন ভার্চুয়াল অর্থ ব্যাবস্থা করা হয়েছে। এখানে যেমন অন্যের মতামতের ভিত্তিতে নিজের মত গ্রহনের সুযোগ রয়েছে তেমনি নিজের মতামত প্রদানের ও সুযোগ রয়েছে। এটি বেটা ভার্সন।
+		<br>
+		<br>
+		এডমিন নিজের বিবেচোনায় এখানে নতুন করমি যোগ করে থাকেন।
+		<br>
+		<br>
+		ধন্যবাদ। 
+
+	</p>
+</div> 
+
+<div class="container-fluid padding">
+		<div  class="row padding">
+			<div class="col-lg-6">
+				<h2 style="padding-top: .5rem">এডমিন সম্পর্কে জানুন</h2>
+				<p style="padding-top: 5rem;padding-bottom: 5rem">
+					মোঃ হাফিজুর রহমান
+					<br>
+					আইডিঃ ২০১৫১১০১০১৪
+					<br>
+					সেশনঃ ২০১৫-১৬
+					<br>
+					কম্পিউটার সায়েন্স এন্ড ইঙ্গিনিয়ারিং বিভাগ
+					<br>
+					বঙ্গবন্ধু শেখ মুজিবুর রহমান বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়
+				</p>
+				<a  class="btn btn-primary btn-lg" href = "{% static 'tutorial.mp4' %}">
+					মেইল করুন
+				</a>
+			</div>
+			<div class="col-lg-6">
+				<figure>
+					<div class="fixed-wrap">
+						<div>
+							<img style="position: fixed;display: block;top: 0;left: 100;width: 50%;height: 100%;background-size: cover;background-position: center center;-webkit-transform: translateZ(0);transform: translateZ(0);will-change: transform;" src="{% static 'me.jpg' %} ">
+						</div>
+					</div>
+				</figure>
+			</div>
+		</div>
+		
+	</div>
+
+{% endblock %}
